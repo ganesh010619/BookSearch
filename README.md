@@ -22,8 +22,8 @@ The **Book Search Application** is a simple web tool that allows users to search
 - **Python**: Version 3.6 or higher
 - **Elasticsearch**: Version 8.x
   - **Ports Used**:
-    - Elasticsearch runs on `http://localhost:9200`
-    - Flask backend runs on `http://localhost:8000`
+    - Elasticsearch runs on `https://localhost:9200`
+    - Flask backend runs on `http://127.0.0.1:8000`
 
 - **Libraries**:
   - **Elasticsearch**: For storing and querying book data.
@@ -67,7 +67,7 @@ python app.py
 
 - The frontend is built using **HTML**, **CSS**, and **JavaScript**. It communicates with the backend to display search results.
 - Open `index.html` in your browser. The app will allow you to search for books and display results dynamically as you interact with the search form.
-- The frontend uses **JavaScript's `fetch()` API** to make requests to the Flask backend (`http://localhost:8000`).
+- The frontend uses **JavaScript's `fetch()` API** to make requests to the Flask backend (`http://127.0.0.1:8000`).
 
 ## Usage Instructions
 
@@ -77,7 +77,7 @@ python app.py
 2. Enter search terms in the available fields:
    - **Title**: Search for books by their title.
    - **Author**: Search for books by the author's name.
-   - **Category**: Search for books by category (e.g., Fiction, History).
+   - **Category**: Search for books by category (e.g., Fiction, Cooking).
    - **Publisher**: Search for books by the publisher.
 3. Optionally, set a **Price Range** filter by entering values for the minimum and maximum price:
    - **Min Price**: Set the minimum price for the books you want to see.
@@ -110,7 +110,7 @@ python app.py
 ### 5. Error Handling and Messages
 
 - **No Results Found**: If no books match your search criteria, a message saying "No results found." will be displayed.
-- **Invalid Search**: If there is an issue with the search input (such as an empty search or invalid characters), the backend will return an appropriate error message.
+- **Invalid Search**: If there is an issue with the search input (such as an empty search or invalid characters), the backend will return an appropriate error message "No results found.".
 
 ---
 
@@ -131,7 +131,6 @@ python app.py
 4. The application will show books in the "Science Fiction" category priced between $10 and $30.
 
 ---
-
 ## Troubleshooting
 
 - **Elasticsearch Connection Error**:
@@ -157,12 +156,12 @@ python app.py
   - You can check the mapping of the `books` index with this command:
 
     ```bash
-    curl -X GET "http://localhost:9200/books/_mapping?pretty"
+    curl -X GET "https://localhost:9200/books/_mapping?pretty"
     ```
 
 - **Frontend Display Issues**:
   - Open the browser's developer console (press `F12`) to check for JavaScript errors.
-  - Ensure the Flask backend (`app.py`) is running at `http://localhost:8000`.
+  - Ensure the Flask backend (`app.py`) is running at `http://127.0.0.1:8000`.
   - Make sure the frontend is correctly calling the backend API.
 
 - **Missing Data or Empty Search Results**:
@@ -176,7 +175,6 @@ python app.py
     from flask_cors import CORS
     CORS(app)  # Enable CORS
     ```
-
 ---
 
 ## Key Files
@@ -191,10 +189,7 @@ python app.py
 ## Screenshots
 
 ### Search Interface:
-![Search Interface](./images/search-interface.png)
+![image](https://github.com/user-attachments/assets/29ca6d70-52e0-4548-b4df-319f3d9e321a)
 
 ### Search Results:
-![Search Results](./images/search-results.png)
-
-### Book Details Page:
-![Book Details](./images/book-details.png)
+![image](https://github.com/user-attachments/assets/0a2e8708-a56a-4e22-a8bd-de2b53eef74e)
