@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("/static/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 40px);
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#results {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#results div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px auto;
+    background: white;
+    border-radius: 5px;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#results h3 {
+    color: #007BFF;
+    margin: 0;
+}
+
+.no-results {
+    text-align: center;
+    color: #555;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
